@@ -70,7 +70,7 @@ También fue necesario revisar que la autenticación cumpliera con la restricci�
 ### Ejemplo 2: comando Artisan
 > Necesito un comando Artisan en Laravel para procesar pedidos bajo reglas específicas de negocio: deben considerarse únicamente los pedidos con estado pendiente, cuya fecha_entrega sea mañana evaluando solo la fecha, y que además estén relacionados con el producto de id 5; la acción a ejecutar consiste en incrementar el total del pedido en un 10%. La solución debe cumplir estas restricciones obligatorias: filtrar en SQL y no en memoria, no cargar todos los pedidos con all() o get() para después filtrarlos, usar Eloquent de forma clara mediante métodos como whereDate y whereHas, considerar cómo evitar reprocesamiento accidental si el comando se ejecuta más de una vez, y mantener el código legible y alineado a buenas prácticas de Laravel. Devuélveme el método handle() completo, una explicación breve de por qué la consulta es eficiente y las advertencias relevantes.
 
-### Ejemplo 3: documentación
+### Ejemplo 3: resolución 
 > Ya tengo avanzada la prueba técnica en Laravel y necesito apoyo para refinar la resolución del proyecto. En este punto ya existe autenticación con Socialite, estructura base de modelos y relaciones, dashboard de pedidos y comando Artisan. Quiero revisar especialmente si la lógica de consultas del dashboard, el uso de Local Scopes, la carga de relaciones con eager loading, la paginación y el procesamiento de pedidos en consola están resueltos de forma correcta y eficiente. Busco una revisión centrada en implementación real, evitando filtros en memoria, ambigüedades en reglas de negocio y complejidad innecesaria.
 
 ## Ejemplos de sugerencias corregidas o rechazadas
