@@ -102,7 +102,7 @@ Credenciales OAuth válidas para GitHub
 
 ### Clonar el repositorio:
 
-git clone 
+git clone https://github.com/AridaiOrtegaZ/order-dashboard.git
 cd order-dashboard
 
 ### Instalar dependencias de PHP:
@@ -120,7 +120,8 @@ cp .env.example .env
 ### Generar la clave de la aplicación:
 
 php artisan key:generate
-Configuración de variables de entorno
+
+### Configuración de variables de entorno
 
 Configura en .env las variables de aplicación, base de datos y OAuth. Un ejemplo sería:
 
@@ -153,6 +154,7 @@ no existe formulario de registro manual
 la identidad del usuario se resuelve a partir del proveedor autenticado
 
 ## Ejecución del proyecto
+El entorno de desarrollo se ejecuta con Laravel Sail, por lo que el proyecto puede levantarse mediante contenedores Docker.
 
 ### Levantar contenedores con Sail:
 

@@ -29,10 +29,11 @@ class Pedido extends Model
     }
 
     // Local Scopes
-    public function scopePorEnviar($query)
+    public function scopePorEnviar(Builder $query): Builder
     {
         return $query->where('estado', 'pendiente')
-            ->whereDate('fecha_entrega', '>=', now()->toDateString());
+            ->whereDate('fecha_entrega', '>=', now()->toDateString())
+            ->whereDate('fecha_entrega', '<=', now()->addDays(3)->toDateString());
     }
 
     public function scopeRetrasados($query)
